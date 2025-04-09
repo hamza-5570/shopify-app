@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "fc224eb650734dff370cd36816975346"
-application_url = "https://vatican-fruits-mrs-barry.trycloudflare.com"
+application_url = "https://shopify-app-frontend-iota.vercel.app/"
 embedded = true
 name = "won-app"
 handle = "won-app"
@@ -29,9 +29,7 @@ scopes = "write_products,write_orders,read_orders,read_customers,write_customers
 
 [auth]
 redirect_urls = [
-  "https://vatican-fruits-mrs-barry.trycloudflare.com/auth/callback",
-  "https://vatican-fruits-mrs-barry.trycloudflare.com/auth/shopify/callback",
-  "https://vatican-fruits-mrs-barry.trycloudflare.com/api/auth/callback"
+ "https://wonport-be.onrender.com/shopifyAccount/callback"
 ]
 
 [pos]
