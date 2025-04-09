@@ -17,15 +17,18 @@ export default function HomePage() {
     host: new URLSearchParams(window.location.search).get("host"),
   });
 
-  const redirect = Redirect.create(app);  
+  const redirect = Redirect.create(app);
   const { data, isLoadingShop } = useGetShop();
   // const {dataDomain,isLoadingDomain,refetchGetDomain}=useGetDomain(data[0]?.domain)
-  const appUrl = window.location.origin;  // Get current base URL
+  const appUrl = window.location.origin; // Get current base URL
   const handleConnect = async () => {
     app.getState().then((state) => {
       console.log("state", state);
     });
-    redirect.dispatch(Redirect.Action.REMOTE,`https://wonport.vercel.app/firstAuthFromShopify?shop=${data[0]?.domain}&email=${data[0]?.email}&appUrl=${appUrl}`)
+    redirect.dispatch(
+      Redirect.Action.REMOTE,
+      `https://wonport.vercel.app/firstAuthFromShopify?shop=${data[0]?.domain}&email=${data[0]?.email}&appUrl=${appUrl}`
+    );
   };
 
   // console.log("isLoadingDomain",isLoadingDomain)
@@ -37,11 +40,11 @@ export default function HomePage() {
         <Layout.Section>
           <Card sectioned>
             <Text variant="headingLg" as="h2" alignment="center">
-              Connect to Wonport App
+              Connect to Wonport App testing
             </Text>
             <center className={style.connect_button_top}>
               <Button primary onClick={handleConnect}>
-                 Connect
+                Connect
               </Button>
             </center>
           </Card>

@@ -7,6 +7,9 @@ import serveStatic from "serve-static";
 import shopify from "./shopify.js";
 import productCreator from "./product-creator.js";
 import PrivacyWebhookHandlers from "./privacy.js";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const PORT = parseInt(
   process.env.BACKEND_PORT || process.env.PORT || "3000",

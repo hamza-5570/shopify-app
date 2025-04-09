@@ -2,6 +2,9 @@ import { defineConfig } from "vite";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import react from "@vitejs/plugin-react";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 if (
   process.env.npm_lifecycle_event === "build" &&
